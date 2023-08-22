@@ -77,6 +77,29 @@ O projeto inclui as seguintes funcionalidades CRUD:
 - **Método:** `GET`
 - **Endpoint:** `/departamentos`
 
+### 9. Buscar pessoas por nome e período, retornando a média gasta por tarefa
+
+- **Method:** `GET`
+- **Endpoint:** `/gastos`
+- **Query Parameters:**
+  - `nome` (required): O nome da pessoa para a qual você deseja obter os gastos.
+  - `dataInicio` (required): A data de início do período para calcular os gastos (formato ISO 8601).
+  - `dataFim` (required): A data de término do período para calcular os gastos (formato ISO 8601).
+- **Response:** Uma lista de objetos JSON contendo informações sobre os gastos das pessoas no período especificado.
+- **Example Endpoint:** `/gastos?nome=Alice&dataInicio=2023-01-01&dataFim=2023-12-31`
+
+```json
+[
+  {
+    "name": "Alice",
+    "totalExpenses": 250.0
+  },
+  {
+    "name": "Carol",
+    "totalExpenses": 150.0
+  }
+]
+
 ## Executando o Projeto
 
 1. Clone o repositório para sua máquina local.
