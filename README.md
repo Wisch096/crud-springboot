@@ -10,7 +10,7 @@ Certifique-se de ter configurado seu ambiente de desenvolvimento Java e Spring B
 
 O projeto utiliza um banco de dados em memória H2 para simplificar a configuração. O arquivo `src/main/resources/application.properties` contém as configurações do banco de dados.
 
-Também deixei comentado no arquivo application.properties a configuração do banco caso queira usar o PostgreSQL, utilizei o H2 por facilitar o desenvolvimento.
+Também deixei comentado no arquivo application.properties e no pom.xml a configuração do banco caso queira usar o PostgreSQL, utilizei o H2 por facilitar o desenvolvimento.
 
 ## Funcionalidades CRUD
 
