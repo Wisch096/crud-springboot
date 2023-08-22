@@ -99,6 +99,7 @@ O projeto inclui as seguintes funcionalidades CRUD:
     "totalExpenses": 150.0
   }
 ]
+```
 
 ## Executando o Projeto
 
