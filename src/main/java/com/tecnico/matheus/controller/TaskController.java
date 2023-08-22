@@ -30,10 +30,10 @@ public class TaskController {
 
     @PutMapping("/alocar/{id}")
     public ResponseEntity<Task> allocateTask(
-            @PathVariable Long taskId,
+            @PathVariable Long id,
             @RequestBody Person person
     ) {
-        Task allocatedTask = taskService.allocateTask(taskId, person);
+        Task allocatedTask = taskService.allocateTask(id, person);
 
         if (allocatedTask == null) {
             return ResponseEntity.notFound().build();
