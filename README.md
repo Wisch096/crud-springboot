@@ -1,6 +1,6 @@
 # README da Aplicação CRUD
 
-Este é um projeto de exemplo para demonstrar uma aplicação CRUD (Criar, Ler, Atualizar, Excluir) simples usando Spring Boot, Spring Data JPA e banco de dados em memória H2.
+Essa é uma API SpringBoot solicitada no teste técnico.
 
 ## Configuração do Projeto
 
@@ -10,6 +10,8 @@ Certifique-se de ter configurado seu ambiente de desenvolvimento Java e Spring B
 
 O projeto utiliza um banco de dados em memória H2 para simplificar a configuração. O arquivo `src/main/resources/application.properties` contém as configurações do banco de dados.
 
+Também deixei comentado no arquivo application.properties a configuração do banco caso queira usar o PostgreSQL, utilizei o H2 por facilitar o desenvolvimento.
+
 ## Funcionalidades CRUD
 
 O projeto inclui as seguintes funcionalidades CRUD:
@@ -17,7 +19,7 @@ O projeto inclui as seguintes funcionalidades CRUD:
 ### 1. Adicionar Pessoa
 
 - **Método:** `POST`
-- **Endpoint:** `/persons`
+- **Endpoint:** `/pessoas`
 - **Payload:** JSON com campos `name` e `department`
 - **Exemplo de Payload:**
   ```json
@@ -29,12 +31,12 @@ O projeto inclui as seguintes funcionalidades CRUD:
 ### 2. Listar Pessoas
 
 - **Método:** `GET`
-- **Endpoint:** `/persons`
+- **Endpoint:** `/pessoas`
 
 ### 3. Adicionar Tarefa
 
 - **Método:** `POST`
-- **Endpoint:** `/tasks`
+- **Endpoint:** `/tarefas`
 - **Payload:** JSON com campos `title`, `description`, `deadline`, `department` e `allocatedPersonId`
 - **Exemplo de Payload:**
   ```json
@@ -50,25 +52,25 @@ O projeto inclui as seguintes funcionalidades CRUD:
 ### 4. Listar Tarefas
 
 - **Método:** `GET`
-- **Endpoint:** `/tasks`
+- **Endpoint:** `/tarefas`
 
 ### 5. Alocar Tarefa para Pessoa
 
 - **Método:** `PUT`
-- **Endpoint:** `/tasks/{idTarefa}/alocar/{idPessoa}`
-- **Exemplo de Endpoint:** `/tasks/1/alocar/2`
+- **Endpoint:** `/tarefas/alocar/{id}`
+- **Exemplo de Endpoint:** `/tarefas/alocar/1`
 
 ### 6. Finalizar Tarefa
 
 - **Método:** `PUT`
-- **Endpoint:** `/tasks/{idTarefa}/finalizar`
-- **Exemplo de Endpoint:** `/tasks/1/finalizar`
+- **Endpoint:** `/tarefas/finalizar/id`
+- **Exemplo de Endpoint:** `/tasks/finalizar/{id}`
 
 ### 7. Listar Tarefas Mais Antigas Não Alocadas
 
 - **Método:** `GET`
-- **Endpoint:** `/tasks/pendentes?limite=3`
-- **Exemplo de Endpoint:** `/tasks/pendentes?limite=3`
+- **Endpoint:** `/tarefas/pendentes?limite=3`
+- **Exemplo de Endpoint:** `/tarefas/pendentes?limite=3`
 
 ### 8. Listar Resumos de Departamentos
 
@@ -81,4 +83,3 @@ O projeto inclui as seguintes funcionalidades CRUD:
 2. Abra o projeto em seu IDE (por exemplo, IntelliJ IDEA ou Eclipse).
 3. Execute a classe `MatheusApplication` para iniciar a aplicação Spring Boot.
 4. Utilize ferramentas como Postman ou cURL para testar as funcionalidades do CRUD.
-
