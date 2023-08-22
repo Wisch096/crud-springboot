@@ -1,4 +1,4 @@
-# README da Aplicação CRUD
+# Teste técnico API
 
 Essa é uma API SpringBoot solicitada no teste técnico.
 
