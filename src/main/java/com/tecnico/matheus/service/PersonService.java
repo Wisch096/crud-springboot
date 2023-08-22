@@ -33,7 +33,7 @@ public class PersonService {
         Optional<Person> existingPerson = personRepository.findById(id);
 
         if (existingPerson.isEmpty()) {
-            return null; // Pode lançar uma exceção personalizada se preferir
+            return null;
         }
 
         Person personToUpdate = existingPerson.get();

@@ -28,7 +28,7 @@ public class TaskController {
         return ResponseEntity.ok(addedTask);
     }
 
-    @PutMapping("/alocar/{taskId}")
+    @PutMapping("/alocar/{id}")
     public ResponseEntity<Task> allocateTask(
             @PathVariable Long taskId,
             @RequestBody Person person
@@ -42,9 +42,9 @@ public class TaskController {
         return ResponseEntity.ok(allocatedTask);
     }
 
-    @PutMapping("/finalizar/{taskId}")
-    public ResponseEntity<Task> finishTask(@PathVariable Long taskId) {
-        Task finishedTask = taskService.finishTask(taskId);
+    @PutMapping("/finalizar/{id}")
+    public ResponseEntity<Task> finishTask(@PathVariable Long id) {
+        Task finishedTask = taskService.finishTask(id);
 
         if (finishedTask == null) {
             return ResponseEntity.notFound().build();

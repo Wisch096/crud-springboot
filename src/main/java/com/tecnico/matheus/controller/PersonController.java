@@ -2,7 +2,6 @@ package com.tecnico.matheus.controller;
 
 import com.tecnico.matheus.dto.PersonGastosDTO;
 import com.tecnico.matheus.entity.Person;
-import com.tecnico.matheus.repository.PersonRepository;
 import com.tecnico.matheus.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("/pessoas")

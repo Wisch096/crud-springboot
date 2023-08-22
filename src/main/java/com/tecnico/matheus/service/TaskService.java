@@ -6,9 +6,7 @@ import com.tecnico.matheus.entity.Task;
 import com.tecnico.matheus.repository.PersonRepository;
 import com.tecnico.matheus.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-import org.springframework.data.domain.Sort;
 import java.util.List;
 import java.util.Optional;
 
